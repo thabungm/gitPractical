@@ -9,26 +9,28 @@
 </head>
 
 <body>
-  <form action="/" method="post">
+  <form action="/form.html" method="post">
     <div>
-      <label for="userName">Enter Username</label>
-      <input type="text" placeholder="Enter username" id="userName" />
+      <label for="userName">Username</label>
+      <input type="text" name="userName" id="userName">
     </div>
+
     <div>
+      <label for="userTypeStudent">Student</label>
+      <input type="radio" name="userType" id="userTypeStudent">
 
-      <label for="designationStudent">Student</label>
-      <input type="radio" name="designation" value="student" id="designationStudent">
-
-      <label for="designationStudent">Professional</label>
-      <input type="radio" name="designation" value="Professional" id="designationProfessional">
+      <label for="userTypeProfessional">Professional</label>
+      <input type="radio" name="userType" id="userTypeProfessional">
     </div>
+
     <div>
-      <label for="comment">Comments</label>
-      <textarea id="comment" rows="10" cols="40">
-      </textarea>
+      <label for="comments">
+        Comments
+      </label>
+      <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
     </div>
-    <input type="submit" value="Submit" />
-
+    <button type="submit"> Submit</button>
+    <button type="button"> Just click</button>
   </form>
 
 </body>
