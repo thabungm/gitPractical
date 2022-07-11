@@ -1,5 +1,3 @@
 # gitPractical
 
-
-
-I am making changes
+- I am making changes
