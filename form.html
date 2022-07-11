@@ -6,13 +6,51 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./style.css" />
+
+  <style>
+    .title2 {
+      border: 1px solid;
+      padding: 10px;
+      background-color: rgb(19, 116, 202);
+      color: white
+    }
+
+    h1 {
+      border: 1px solid;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
   <form action="/form.html" method="post">
+    <h1>
+      Hello world
+    </h1>
+
+    <h1>
+      Hello world
+    </h1>
+    <div style="border: 1px solid; padding: 10px;">
+      Title: Feedback form 1
+    </div>
+
+    <div class="title2">
+      Title: Feedback form 2
+    </div>
+
+    <div class="title2">
+      Title: Feedback form 2.1
+    </div>
+
+    <div id="title3">
+      Title: Feedback form 3
+    </div>
     <div>
       <label for="userName">Username</label>
-      <input type="text" name="userName" id="userName">
+      <input type="text" placeholder="Please enter username" name="userName" id="userName">
     </div>
 
     <div>
@@ -29,8 +67,29 @@
       </label>
       <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
     </div>
+    <div>
+
+      <select name="colors">
+        <option>Red</option>
+        <option>Green</option>
+        <option>Blue</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="brand">Choose a brand</label>
+      <input list="brands" id="brand" />
+      <datalist id="brands">
+        <option value="Apple">
+        <option value="Windows">
+        <option value="Facebook">
+      </datalist>
+
+    </div>
+
+
+    <button type="reset">Reset</button>
     <button type="submit"> Submit</button>
-    <button type="button"> Just click</button>
   </form>
 
 </body>
