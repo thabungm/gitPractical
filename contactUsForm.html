@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="/" method="post">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name">
+    </div>
+
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email">
+    </div>
+
+    <div>
+      <label for="phNumber">PhNumber</label>
+      <input type="text" name="phNumber" id="phNumber">
+    </div>
+
+    <div>
+      <label>Gender</label>
+
+      <label for="male">Male</label>
+      <input type="radio" value="male" name="gender" id="male">
+
+      <label for="female">Male</label>
+      <input type="radio" value="female" name="gender" id="male">
+    </div>
+    <div>
+      <label for="profession">Profession</label>
+      <select id="profession" name="profession">
+        <option>Govt. official</option>
+        <option>Private employees</option>
+      </select>
+    </div>
+    <div>
+      <label for="message"></label>
+      <textarea id="message" cols="20" rows="10">
+      </textarea>
+    </div>
+
+    <div>
+      <input id="agree" type="checkbox" />
+      <label for="agree"> I accept the terms and conditions</label>
+    </div>
+    <div>
+      <input type="reset" value="Reset" />
+      <input type="submit" value="Submit" />
+    </div>
+
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .headContainer {
+      padding: 20px;
+      background: #F4C7AE;
+      border: 2px solid #C0401D;
+    }
+
+    .headContainer .navigationInContainer {
+      background: #DBF4A8;
+      padding: 20px;
+      border: 2px solid black;
+    }
+
+    div.main>.mainArticle {
+      background: #DDDDDD;
+      border: 2px solid gray;
+      padding: 20px;
+    }
+
+    div.main {}
+
+
+    .mainArticle .section {
+      background: #CAFBFF;
+      border: 2px solid black;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .headContainer>.navigationInContainer {
+      background-color: red;
+    }
+
+    .headContainer .innerChild {
+      background-color: green;
+
+    }
+
+    .sibling1~.sibling2 {
+      background: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sibling1">
+    Sibling 1
+  </div>
+  <div>Sibling 1.1</div>
+  <div class="sibling2">
+    Sibling 2
+  </div>
+
+
+
+
+  <header class="headContainer">
+    <nav class="navigationInContainer">
+      <div class="innerChild">
+        Inner Child
+      </div>
+      <div class="innerChild2">
+        Inner Child2
+      </div>
+      header Nav
+    </nav>
+  </header>
+  <div class="main">
+    <article class="mainArticle">
+      <section class="section">
+        section 1
+      </section>
+      <section class="section">
+        section 2
+      </section>
+      <section class="section">
+        section 3
+      </section>
+    </article>
+    <aside class="mainAside">
+      Aside
+    </aside>
+  </div>
+  <footer class="headContainer">
+    <nav class="navigationInContainer">
+      footer NavigationContainer
+    </nav>
+  </footer>
+
+
+</body>
+
+</html>
