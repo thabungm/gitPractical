@@ -6,111 +6,53 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./style.css" />
+  <!-- <link rel="stylesheet" href="./style.css" /> -->
   <style>
-    .div2 {
-      background-color: green;
-      color: aliceblue;
-      padding: 3px;
-      margin-top: 7px;
-      margin-bottom: 20px;
-    }
-
-    #div4 {
-      background-color: black;
-      color: white;
-      padding: 20px;
-    }
-
-    .parent {
-      background: blue;
-      padding: 10px;
-    }
-
-    /* 
-    - put spacing around child1, child2, child3
-    - put spacing around the children of .parent
-     */
-    .parent>div {
-      padding: 20px;
-      margin: 20px;
-      background: white;
-      border: 3px solid red;
-    }
-
     /*
-      change the background of the siblings of
-      child 1 to green;
+    color•font-size•font-style•font-weight•
+    text-align•text-decoration•line-height
+    height•width•background-color•background-image•background-size•background-positionCommon CSS Properties
+
     */
-    .child1~div {
-      background: green;
-    }
-
-    .gchild1 {
-      background: blue;
-    }
-
-    .gchild2 {
-      background: red;
-    }
-
-    /* 
-  change background of all the children of parent1
- */
-    .parent1>div {
-      background: yellow;
+    .parent {
+      width: 500px;
+      border: 1px solid green;
       padding: 10px;
+      height: 300px;
     }
 
-    /* target all the divs inside the .parent1 */
-    .parent1 div {
-      background: rgb(0, 234, 255);
-      padding: 10px;
+    .demoText {
+      padding: 5px;
+      color: blue;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: 900;
+      text-align: right;
+      text-decoration: underline;
+      line-height: 20px;
+
+      border: 2px solid black;
+      height: 250px;
+      width: 250px;
+      background-color: aquamarine;
+
+      background-image: url(https://www.olympus-imaging.co.in/content/000107506.jpg);
+      background-size: cover;
     }
   </style>
 
 </head>
 
 <body>
-
-  <div class="parent1">
-    <div class="p1child1">
-      <div class="gchild1">
-        grandchild1
-      </div>
-      <div class="gchild2">
-        grandchild2
-      </div>
-    </div>
-    <div>child2 for parent1</div>
-  </div>
-
   <div class="parent">
-    <div class="child1">
-      Child 1
+
+    <div class="demoText">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, facere accusantium assumenda asperiores
+      perferendis
+      corporis labore harum ipsa ab quo? Molestiae unde vitae, voluptates cupiditate aperiam neque non similique
+      possimus?
     </div>
-    <div class="child2">
-      Child 2
-    </div>
-    <div class="child3">
-      Child 3
-    </div>
-  </div>
 
-
-
-  <div style="padding: 10px;background: #0000ff;">
-    Hello world
-  </div>
-  <div class="div2">
-    Div 2
-  </div>
-
-  <div class="div3">
-    Div3
-  </div>
-  <div id="div4">
-    Div 4
   </div>
 </body>
 
