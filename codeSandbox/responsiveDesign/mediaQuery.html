@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      padding: 10px;
+      background: gray;
+      margin: 10px;
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+      .container {
+        background: orange;
+        float: left;
+        width: 200px;
+      }
+    }
+
+    /*tablets*/
+    @media only screen and (max-width : 480px) and (min-width: 200px) {
+      .container {
+        background: blue;
+        color: white;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reiciendis amet fugiat ut. Odit nisi ea, cum
+    officia repellendus ab, dolor soluta repellat nam, necessitatibus reiciendis sequi ad optio nobis.
+  </div>
+  <div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reiciendis amet fugiat ut. Odit nisi ea, cum
+    officia repellendus ab, dolor soluta repellat nam, necessitatibus reiciendis sequi ad optio nobis.
+  </div>
+  <div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat reiciendis amet fugiat ut. Odit nisi ea, cum
+    officia repellendus ab, dolor soluta repellat nam, necessitatibus reiciendis sequi ad optio nobis.
+  </div>
+</body>
+
+</html>
