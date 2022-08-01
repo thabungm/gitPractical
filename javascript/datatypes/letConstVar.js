@@ -14,6 +14,7 @@ const circle = {
   permiter: 2 * 1.41 * 3,
 };
 */
+/*
 const circle = {
   radius: 2,
   name: 'Small circle',
@@ -28,9 +29,10 @@ const circle = {
     console.log('the perimeter is: ', result);
   },
 };
+*/
 
-circle.diameter();
-circle.permimeter();
+// circle.diameter();
+// circle.permimeter();
 
 // const
 /*
