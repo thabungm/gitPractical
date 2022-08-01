@@ -1,35 +1,46 @@
-// const person = 'Sarah';
-// const age = 20;
-// // const message = 'Hello ' + person + ', how are you';
-// // template literals
-// const message = `Hello ${person}'s,I'm ${age}
+// const products = [
+//   { name: 'Earphone', price: 100 },
+//   { name: 'Laptop', price: 700, discount: 0 },
+// ];
+/*
+ for each product, print discount 
+ if there is a discount field
+  else 
+print default discount of 2 dollars
+*/
+// console.log('discount:', products[0].discount || 2);
+// console.log('discount:', products[1].discount || 2);
 
-// this is sample message
+const person = 'Sarah';
+const age = 20;
+// const message = 'Hello ' + person + ', how are you ' + '   ' + '';
+// template literals
+const message = `Hello ${person},     how are you?
 
-// `;
-// console.log(message);
+
+Text after newline.
+`; //
+console.log(message);
+
 //optional chaining
 // const person = {};
 
-const course1 = {
-  name: 'MERN',
-  contact: {
-    helpline: 'ABC-123',
-  },
-};
+// const course1 = {
+//   name: 'MERN',
+//   contact: {
+//     helpline: 'ABC-123',
+//   },
+// };
 
-const course2 = {
-  name: 'Javascript',
-  //   contact: {
-  //     helpline: 'DEF-123',
-  //   },
-};
+// const course2 = {
+//   name: 'Javascript',
+// };
 
-if (course2.contact) {
-  console.log(course2.contact.helpline);
-}
+// if (course2.contact) {
+//   console.log(course2.contact.helpline);
+// }
 // console.log(course2.contact.helpline);
-console.log(course2?.contact?.helpline);
+// console.log(course2?.contact?.helpline);
 // if (person.address) {
 //   console.log(person.address.pin);
 // }
