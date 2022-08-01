@@ -5,10 +5,11 @@ const couse1 = {
     office: '567d-456-7890',
   },
 };
-console.log(couse1.contact.helpline);
 
-const couse2 = {
-  name: 'MERN stack',
+const course2 = {
+  name: 'Javascript',
 };
-
-console.log(couse2?.contact?.helpline);
+// if (course2.contact) {
+//   console.log(couse2.contact.helpline);
+// }
+console.log(course2?.contact?.helpline);
