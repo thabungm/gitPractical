@@ -1,13 +1,33 @@
+const printGreetings = function () {
+  console.log(this.greeting);
+};
+
+const sayMorning = {
+  greeting: 'Good morning',
+  printGreetings: printGreetings,
+};
+
+sayMorning.printGreetings();
+
+const sayGoodNight = {
+  greeting: 'Good night',
+  printGreetings: printGreetings,
+};
+
+sayGoodNight.printGreetings();
+
+/*
 const circle = {
   radius: 10,
   perimeter: function () {
-    function innerFunction() {
-      console.log('inside innerFunction', this);
-    }
-    innerFunction();
     console.log('inside perimeter', this);
-    // return 2 * 3.14 * this.radius;
   },
 };
 
+function test() {
+  console.log('inside test', this);
+}
 const result = circle.perimeter();
+
+test();
+*/
