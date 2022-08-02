@@ -15,19 +15,3 @@ const sayGoodNight = {
 };
 
 sayGoodNight.printGreetings();
-
-/*
-const circle = {
-  radius: 10,
-  perimeter: function () {
-    console.log('inside perimeter', this);
-  },
-};
-
-function test() {
-  console.log('inside test', this);
-}
-const result = circle.perimeter();
-
-test();
-*/
