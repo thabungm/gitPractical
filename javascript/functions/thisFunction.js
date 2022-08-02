@@ -7,11 +7,17 @@ const sayMorning = {
   printGreetings: printGreetings,
 };
 
-sayMorning.printGreetings();
+// sayMorning.printGreetings();
 
 const sayGoodNight = {
   greeting: 'Good night',
   printGreetings: printGreetings,
 };
 
-sayGoodNight.printGreetings();
+// sayGoodNight.printGreetings();
+
+// printGreetings.call(sayMorning);
+// printGreetings.call(sayGoodNight);
+
+const newPrintGreeting = printGreetings.bind(sayGoodNight);
+newPrintGreeting();
