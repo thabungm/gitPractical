@@ -1,4 +1,4 @@
-// function expression
+// function declaration
 function computeArea(length, width) {
   return length * width;
 }

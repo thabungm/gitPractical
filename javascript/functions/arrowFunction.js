@@ -10,19 +10,18 @@ const computeArrow = (length, width) => {
 const computeArrowV1 = (length, width) => length * width;
 // console.log(computeArrowV1(2, 3));
 
-function printObject() {
-  const result = {
+function createCourse() {
+  const course = {
     name: 'MERN',
     pax: 20,
   };
 
-  return result;
+  return course;
 }
 
 // console.log(printObject());
 
-/*
-const printObjectArrow = () => {
+const createCourseArrow = () => {
   const result = {
     name: 'MERN',
     pax: 20,
@@ -30,12 +29,23 @@ const printObjectArrow = () => {
 
   return result;
 };
-*/
-const computeArrowV3 = (length, width) => length * width;
 
-const printObjectArrow = () => ({
+const createCourseArrowv2 = () => ({
   name: 'MERN stack',
   pax: 20,
 });
 
-console.log(printObjectArrow());
+// console.log(createCourseArrowv2());
+//'this'
+const course = {
+  name: 'MERN',
+  printCourse: function () {
+    console.log(this.name);
+    const courseInside = () => {
+      console.log('courseInside->', this.name);
+    };
+
+    courseInside();
+  },
+};
+course.printCourse();

@@ -21,3 +21,5 @@ const sayGoodNight = {
 
 const newPrintGreeting = printGreetings.bind(sayGoodNight);
 newPrintGreeting();
+
+// hoisting
