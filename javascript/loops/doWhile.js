@@ -1,5 +1,5 @@
-let condition = 1;
+let count = 1;
 do {
-  console.log(condition);
-  condition++;
-} while (condition <= 5);
+  console.log(count);
+  ++count;
+} while (count < 5);

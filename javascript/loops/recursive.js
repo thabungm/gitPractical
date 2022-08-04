@@ -1,8 +1,7 @@
-const myLoopyFunction = function (counter, maxCount) {
+const countNumber = function (maxCount, counter) {
   console.log(counter);
   if (counter < maxCount) {
-    myLoopyFunction(counter + 1, maxCount);
+    countNumber(maxCount, counter + 1);
   }
 };
-
-myLoopyFunction(0, 10);
+countNumber(10, 1);

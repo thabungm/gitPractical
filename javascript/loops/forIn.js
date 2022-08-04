@@ -1,8 +1,8 @@
-// for-in
+// forIn
 const course = {
   name: 'MERN',
-  duration: 23,
-  contact: '123',
+  duration: 30,
+  contact: 'ABC-123',
 };
 
 for (const key in course) {

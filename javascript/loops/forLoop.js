@@ -1,3 +1,3 @@
-for (let count = 1; count <= 30; count = count + 1) {
+for (let count = 1; count <= 30; ++count) {
   console.log(`Count ${count}`);
 }
