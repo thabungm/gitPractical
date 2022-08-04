@@ -1,27 +1,26 @@
-// ecommerce -> Product
-function Product(name, price, quantity) {
-  this.name = name;
-  this.price = price;
-  this.quantity = quantity;
+function Product(productName, productPrice, productQuantity) {
+  this.name = productName;
+  this.price = productPrice;
+  this.quantity = productQuantity;
 
-  this.buy = function (buyCount) {
-    if (buyCount > this.quantity) {
-      console.log('Sorry! not enough stock!');
+  this.buy = function (buyQuantity) {
+    if (buyQuantity > this.quantity) {
+      console.log('Sorry! out of stock');
       return;
     }
-    console.log(`Buy ${buyCount} ${this.name}`);
-    const bill = buyCount * this.price;
-    this.quantity = this.quantity - buyCount;
-    console.log(`The total bill is: ${bill}`);
+    console.log(`Buy ${buyQuantity} ${this.name}`);
+    const bill = buyQuantity * this.price;
+    console.log(`Total bill: ${bill}`);
+    console.log(`Qty before buy:${this.quantity}`);
+    this.quantity = this.quantity - buyQuantity;
+    console.log(`Qty after buy:${this.quantity}`);
+
+    // this.quantity -= buyQuantity;
   };
 }
 
-const apple = new Product('Apple', 2, 10);
-console.log(apple);
+const orange = new Product('Orange', 2, 10);
+orange.buy(2);
 
-const mango = new Product('Mango', 1.5, 5);
-console.log(mango);
-console.log('Before stock:', mango.quantity);
-
-mango.buy(2);
-console.log('After stock:', mango.quantity);
+const apple = new Product('Apple', 4, 10);
+apple.buy(4);

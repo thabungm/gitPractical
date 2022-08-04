@@ -8,7 +8,6 @@ const computeArrow = (length, width) => {
 // console.log(computeArrow(2, 3));
 
 const computeArrowV1 = (length, width) => length * width;
-// console.log(computeArrowV1(2, 3));
 
 function createCourse() {
   const course = {
@@ -36,16 +35,19 @@ const createCourseArrowv2 = () => ({
 });
 
 // console.log(createCourseArrowv2());
-//'this'
 const course = {
   name: 'MERN',
   printCourse: function () {
-    console.log(this.name);
-    const courseInside = () => {
-      console.log('courseInside->', this.name);
+    console.log(this);
+    const printInside = () => {
+      /* 
+      'this' inside an arrow will refer to the 'this' of 
+       the function  where the arrow function is defined
+      */
+      console.log('inside printinside', this.name);
     };
-
-    courseInside();
+    printInside();
   },
 };
+
 course.printCourse();
