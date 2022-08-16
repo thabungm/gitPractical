@@ -6,19 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            background: blue;
+            height: 400px;
+        }
+
+        body {
+            padding: 200px;
+        }
+    </style>
 </head>
 
-<body onkeyup="handleKeyPress(event)">
+<body>
+    <div id="container" class="container">
 
-    <input type="text" onkeyup="onKeyUpHandler(event)" onkeydown="onKeyDownHandler(event)" />
-    <!-- <div id="container1">
-        container1
     </div>
-    <div class="container2">
-        container2
-    </div> -->
 </body>
-
 <script src="index.js"></script>
 
 </html>
