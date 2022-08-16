@@ -1,31 +1,30 @@
-// function handleClick(event) {
-//   console.log(event);
-// }
-
-// document
-//   .getElementById('container')
 const container = document.querySelector('#container');
-
 container.addEventListener('click', function (event) {
-  console.log('inside click', event);
+  const { clientX, clientY } = event;
+  console.log('click');
 });
 
 container.addEventListener('dblclick', function (event) {
-  console.log('dblclick', event);
+  const { clientX, clientY } = event;
+  console.log('dblclick');
 });
 
 container.addEventListener('contextmenu', function (event) {
-  console.log('right click', event);
+  const { clientX, clientY } = event;
+  console.log('rightclick');
 });
 
 container.addEventListener('mouseenter', function (event) {
-  console.log('mouseenter', event);
+  const { clientX, clientY } = event;
+  console.log('mouseenter');
 });
 
 container.addEventListener('mouseleave', function (event) {
-  console.log('mouseleave', event);
+  const { clientX, clientY } = event;
+  console.log('mouseleave');
 });
 
 container.addEventListener('mousemove', function (event) {
-  console.log('onmousemove', { x: event.screenX, y: event.screenY });
+  const { clientX, clientY } = event;
+  console.log(`mouseleave ${clientX + ' ' + clientY}`);
 });
