@@ -66,7 +66,7 @@ formEl.addEventListener('submit', function (evnt) {
     console.log('The form is valid');
 
     // connect to backend api from here
-    axios.post('abc.com/v1/submit', getFormValues);
+    // axios.post('abc.com/v1/submit', getFormValues);
   } else {
     console.log('The form is invalid');
   }
