@@ -1,17 +1,28 @@
-// closure function
-function greet() {
-  let message = 'Hello world';
-
+function test() {
+  let message = 'hello';
+  // return 'messageHi';
   return function () {
     console.log(message);
   };
 }
-
 /*
-    closure function returns a function a.k.a "inner function"
-    & the inner function has access to variables 
-    of the outer function even after the outer function
-    has completed its execution
+  closure function returns a function aka "inner fn"
+  and the inner fn has access to variables of the
+  outer function even after the outer fn completes execution
+
 */
-const printMessage = greet();
-printMessage();
+const innerFn = test(); // outer fn completed execution
+// console.log(innerFn);
+innerFn();
+
+/* // let const var
+function printMsg() {
+  // var message = 'hello world';
+  if (true) {
+    var message = 'hello world';
+  }
+  console.log(message);
+}
+
+printMsg();
+ */

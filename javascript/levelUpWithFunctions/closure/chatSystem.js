@@ -1,28 +1,45 @@
-function chatRoom() {
+function chatSystem() {
   let members = [];
-  function joinRoom(member) {
-    members.push(member);
-    console.log(`${member} is joining`);
+
+  function joinRoom(newMember) {
+    if (members.includes(newMember)) {
+      console.log(`${newMember} already in`);
+      return;
+    }
+
+    members.push(newMember);
+    console.log(`${newMember} joined :)`);
+  }
+
+  function printMembers() {
+    console.log(members);
   }
 
   function leaveRoom(leavingMember) {
-    members = members.filter((member) => member != leavingMember);
-    console.log(`${leavingMember} is leaving`);
+    members = members.filter((member) => {
+      return member !== leavingMember;
+    });
+    console.log(`${newMember} left :(`);
   }
 
-  function getParticipants() {
-    console.log(members);
-    return members;
-  }
-
-  return { joinRoom, leaveRoom, getParticipants };
+  const result = {
+    joinRoom: joinRoom,
+    printMembers: printMembers,
+    leaveRoom: leaveRoom,
+  };
+  return result;
 }
 
-const chatRoomObj = chatRoom();
-const { joinRoom, leaveRoom, getParticipants } = chatRoomObj;
-
-joinRoom('Alex');
+const newChatSystem = chatSystem();
+// const { joinRoom } = newChatSystem;
+const joinRoom = newChatSystem.joinRoom;
+const printMembers = newChatSystem.printMembers;
+const leaveRoom = newChatSystem.leaveRoom;
 joinRoom('Mike');
-getParticipants();
-leaveRoom('Alex');
-getParticipants();
+joinRoom('Mike');
+joinRoom('Mike');
+
+joinRoom('Jay');
+joinRoom('Sachin');
+
+printMembers();
