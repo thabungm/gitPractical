@@ -1,0 +1,13 @@
+.container {
+    background: blue;
+    padding: 20px;
+    display: flex;
+    color: white;
+    gap: 10px;
+}
+
+.container>* {
+    background: green;
+    padding: 20px;
+
+}

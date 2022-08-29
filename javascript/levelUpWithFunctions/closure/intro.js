@@ -1,9 +1,11 @@
 function test() {
   let message = 'hello';
   // return 'messageHi';
-  return function () {
+  function innerFn() {
     console.log(message);
-  };
+  }
+
+  return innerFn;
 }
 /*
   closure function returns a function aka "inner fn"

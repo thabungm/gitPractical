@@ -7,21 +7,30 @@ document
   .addEventListener('change', function (event) {
     console.log('init calculation', event.target.value);
 
-    currencyConvert(event.target.value);
+    const modifiedRenderRow = currencyConvert(event.target.value, renderRows);
+    modifiedRenderRow(cart);
+
+    const modifiedCurrencyConvert = currencyConvert(
+      event.target.value,
+      renderTotal
+    );
+    modifiedCurrencyConvert(cart);
   });
 
-const currencyConvert = (currency) => {
-  //   const currencyValue = currencyRates[currency];
-  console.log(currency);
-  const newCartItems = cart.map(function (item) {
-    return {
-      ...item,
-      cost: item.cost * currency,
-    };
-  });
-  renderRows(newCartItems);
-  renderTotal(newCartItems);
+const currencyConvert = (currency, fn) => {
+  function modifiedFunction(cart) {
+    const newCartItems = cart.map(function (item) {
+      return {
+        ...item,
+        cost: item.cost * currency,
+      };
+    });
+    fn(newCartItems);
+  }
+
+  return modifiedFunction;
 };
+
 renderCurrencySelector(currencyRates);
 renderRows(cart);
 renderTotal(cart);
