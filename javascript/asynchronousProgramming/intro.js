@@ -1,8 +1,12 @@
-/* setTimeout(function () {
-  console.log('hello world');
-}, 2000); */
+setTimeout(
+  function (message) {
+    console.log(message);
+  },
+  5000,
+  'hi'
+); //1000ms = 1s
 
-const intervalRef = setInterval(
+setInterval(
   function (message) {
     // console.log(message);
     console.log(new Date());
@@ -10,6 +14,15 @@ const intervalRef = setInterval(
   1000,
   'hellow'
 );
+
+/* const intervalRef = setInterval(
+  function (message) {
+    // console.log(message);
+    console.log(new Date());
+  },
+  1000,
+  'hellow'
+); */
 
 /* setTimeout(function () {
   clearInterval(intervalRef);
