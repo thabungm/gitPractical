@@ -10,6 +10,7 @@ function displayClock(timeZone, target) {
     document.querySelector(target).innerText = `${timeZone}:${dateLocale}`;
   }, 1000);
 }
+
 displayClock('America/Cancun', '.eastern');
 displayClock('Asia/Kolkata', '.asian');
 displayClock('Canada/Atlantic', '.central');
