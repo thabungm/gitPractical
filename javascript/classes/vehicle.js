@@ -3,7 +3,7 @@ class Vehicle {
     this.model = model;
     this.color = color;
     this.tranmission = transmission;
-    this.speed = 0;
+    this.speed = 0; // halted
   }
 
   accelerate() {
@@ -25,9 +25,9 @@ const honda = new Vehicle('Model1', 'blue', 'manual');
 // console.log(honda);
 honda.accelerate();
 honda.accelerate();
-honda.accelerate();
-honda.accelerate();
+// honda.accelerate();
+// honda.accelerate();
 honda.decelerate();
 honda.decelerate();
 honda.decelerate();
-honda.decelerate();
+// honda.decelerate();

@@ -9,18 +9,24 @@ class Person {
 }
 
 class Student extends Person {
-  constructor(name, rollNo) {
-    super(name);
-    this.rollNo = rollNo;
-  }
-
-  printInfo() {
-    console.log(`
-    Name: ${this.name}
-    Roll: ${this.rollNo}`);
+  constructor(name, rollNumber) {
+    super(name); // mandatory
+    this.rollNumber = rollNumber;
   }
 }
 
+class Teacher extends Person {
+  constructor(name, teacherId) {
+    super(name);
+    this.teacherId = teacherId;
+  }
+}
 const newStudent = new Student('Mike', 'B101');
 newStudent.welcome();
-newStudent.printInfo();
+
+/* const newTeacher = new Teacher('Teacher', 'Teacher001');
+newTeacher.welcome(); */
+
+/* const newStudent = new Student('Mike', 'B101');
+newStudent.welcome();
+newStudent.printInfo(); */
