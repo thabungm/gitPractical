@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import Reversecc from './components/Reversecc';
 import Reversefc from './components/Reversefc';
-
 export const message = 'hellow';
 
 export const user = 'Mike';
@@ -13,7 +12,7 @@ function App() {
 
       <div className='container'>
         <Reversecc />
-        {/* <Reversefc /> */}
+        <Reversefc />
       </div>
 
       <footer>footer</footer>

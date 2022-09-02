@@ -4,9 +4,9 @@ class Reversecc extends Component {
   // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props);
-    // this.state = { message: 'hello' };
+    this.state = { message: 'hello' };
   }
-  state = { message: 'hello' };
+  // state = { message: 'hello' };
 
   render() {
     return (
