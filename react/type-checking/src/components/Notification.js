@@ -8,6 +8,7 @@ const Notification = ({ messages }) => (
     ))}
   </ul>
 );
+
 Notification.propTypes = {
   messages: PropTypes.array,
 };

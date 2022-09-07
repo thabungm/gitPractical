@@ -1,0 +1,15 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.profilePicture {
+  border-radius: 50%;
+  border: 3px solid green;
+}
+
+.profileCard {
+  border: 1px solid;
+  padding: 5px;
+  margin-bottom: 5px;
+}
