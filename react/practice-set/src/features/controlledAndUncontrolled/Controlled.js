@@ -3,7 +3,6 @@ import { useState } from 'react';
 const ControlledForm = () => {
   //name , email
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
 
   return (
     <form>

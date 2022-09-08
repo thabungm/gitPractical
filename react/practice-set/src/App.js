@@ -7,6 +7,7 @@ import Counter from './features/errorBoundary/Counter';
 import DemoErrorBoundary from './features/errorBoundary/DemoErrorBoundary';
 import ControlledForm from './features/controlledAndUncontrolled/Controlled';
 import UnControlled from './features/controlledAndUncontrolled/UnControlled';
+import FormValidation from './features/form/FormValidation';
 function App() {
   return (
     <div className='App'>
@@ -15,8 +16,9 @@ function App() {
       {/* <Counter /> */}
       {/* <DemoErrorBoundary /> */}
       {/* <ControlledForm /> */}
-      <UnControlled />
+      {/* <UnControlled /> */}
       {/* <Fragments /> */}
+      <FormValidation />
     </div>
   );
 }

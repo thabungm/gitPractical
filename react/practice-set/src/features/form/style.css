@@ -1,0 +1,16 @@
+.textInput {
+    padding: 10px;
+    border: 1px solid;
+    margin-bottom: 2px;
+}
+.error {
+    color: red;
+    font-size: 13px;
+}
+.failure {
+    color: red;
+
+}
+.success {
+    color: green;
+}

@@ -18,17 +18,26 @@ class ProfileListCC extends React.Component {
     // console.log("Mounted");
     const url = 'https://randomuser.me/api/?nat=us&results=40&page=30';
     const resultPromise = axios.get(url);
-    resultPromise.then((result) => {
-      this.setState({ users: result?.data?.results });
-    });
+    resultPromise
+      .then((result) => {
+        this.setState({ users: result?.data?.results });
+      })
+      .catch((error) => {
+        this.setState({ isError: true });
+      });
   }
 
   renderUserList() {
-    return this.state.users.map((user) => (
-      <div>
-        <Profile user={user} />
-      </div>
-    ));
+    return (
+      <>
+        {!this.state.isError &&
+          this.state.users.map((user) => (
+            <div>
+              <Profile user={user} />
+            </div>
+          ))}
+      </>
+    );
   }
   render() {
     return (
