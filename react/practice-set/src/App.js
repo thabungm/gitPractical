@@ -8,6 +8,7 @@ import DemoErrorBoundary from './features/errorBoundary/DemoErrorBoundary';
 import ControlledForm from './features/controlledAndUncontrolled/Controlled';
 import UnControlled from './features/controlledAndUncontrolled/UnControlled';
 import FormValidation from './features/form/FormValidation';
+import PortalDemo from './features/portal/PortalDemo';
 function App() {
   return (
     <div className='App'>
@@ -18,7 +19,8 @@ function App() {
       {/* <ControlledForm /> */}
       {/* <UnControlled /> */}
       {/* <Fragments /> */}
-      <FormValidation />
+      {/* <FormValidation /> */}
+      <PortalDemo />
     </div>
   );
 }

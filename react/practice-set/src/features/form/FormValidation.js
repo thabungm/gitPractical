@@ -9,11 +9,17 @@ const FormValidation = () => {
 
   const [success, setSuccess] = useState('');
   const [failure, setFailure] = useState('');
+
   const [formData, setFormData] = useState({
     name: '',
     body: '',
+    privilege: {
+      admin: false,
+      moderator: false,
+      user: false,
+    },
   });
-  const { name, body } = formData;
+  const { name, body, privilege } = formData;
 
   const [errors, setErrors] = useState({
     name: '',
@@ -35,10 +41,17 @@ const FormValidation = () => {
   const onChange = (event) => {
     event.preventDefault();
     runValidation(event);
-
+    debugger;
     setFormData({
       ...formData,
-      [event.target.name]: event.target.value,
+      [event.target.name]:
+        event.target.type === 'checkbox'
+          ? {
+              ...formData[event.target.name],
+              [event.target.value]:
+                !formData[event.target.name][event.target.value],
+            }
+          : event.target.value,
     });
   };
 
@@ -68,15 +81,50 @@ const FormValidation = () => {
           placeholder='Enter Name'
           onChange={onChange}
           errorMessage={errors.name}
+          value={name}
           required
         />
         <TextInput
           name='body'
+          value={body}
           placeholder='Enter body'
           onChange={onChange}
           errorMessage={errors.body}
           required={true}
         />
+        <div>
+          <label>
+            Admin
+            <input
+              name='privilege'
+              onChange={onChange}
+              checked={privilege.admin}
+              value='admin'
+              type='checkbox'
+            />
+          </label>
+          <label>
+            Moderator
+            <input
+              name='privilege'
+              onChange={onChange}
+              checked={privilege.moderator}
+              value='moderator'
+              type='checkbox'
+            />
+          </label>
+          <label>
+            User
+            <input
+              name='privilege'
+              onChange={onChange}
+              checked={privilege.user}
+              value='user'
+              type='checkbox'
+            />
+          </label>
+        </div>
+        {JSON.stringify(formData)}
 
         <button>Submit</button>
       </form>
