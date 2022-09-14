@@ -10,6 +10,7 @@ import UnControlled from './features/controlledAndUncontrolled/UnControlled';
 import FormValidation from './features/form/FormValidation';
 import PortalDemo from './features/portal/PortalDemo';
 import RoutesDemo from './features/routes';
+import ContextApiTest from './features/contextApi/usingContextApi/ContextApiTest';
 function App() {
   return (
     <div className='App'>
@@ -23,7 +24,8 @@ function App() {
       {/* <FormValidation /> */}
 
       {/* <PortalDemo /> */}
-      <RoutesDemo />
+      {/* <RoutesDemo /> */}
+      <ContextApiTest />
     </div>
   );
 }
