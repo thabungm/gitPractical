@@ -14,13 +14,6 @@ const RoutesDemo = () => {
           <Route path='contact' element={<ContactUs />}></Route>
           <Route path='*' element={<NoPage />}></Route>
         </Route>
-
-        <Route path='/accounts' element={<Layout />}>
-          <Route index element={<Home />}></Route>
-          <Route path='change-password' element={<Blogs />}></Route>
-          <Route path='contact' element={<ContactUs />}></Route>
-          <Route path='*' element={<NoPage />}></Route>
-        </Route>
       </Routes>
     </BrowserRouter>
   );
