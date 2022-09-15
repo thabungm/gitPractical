@@ -2,6 +2,11 @@ import { createContext, useState } from 'react';
 
 /**
  * A -> B -> C -> D -> E
+ * A 
+ *  B
+ *    C
+ *      D
+ *        E
  * A -> context -> E
  * //component put data ----> context --> consumed by other components
 - provider -> produce data
@@ -11,7 +16,7 @@ import { createContext, useState } from 'react';
 export const ColorContext = createContext({});
 
 export const ColorContextProvider = ({ children }) => {
-  const [color, setColor] = useState('Green');
+  const [color, setColor] = useState('Red');
 
   return (
     <ColorContext.Provider
