@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../context/CartContext';
 const CartIcon = () => {
   const { cartItems } = useContext(CartContext);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState();
 
   useEffect(() => {
     setCount(cartItems.length);
