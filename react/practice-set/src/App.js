@@ -12,6 +12,8 @@ import PortalDemo from './features/portal/PortalDemo';
 import RoutesDemo from './features/routes';
 import ContextApiTest from './features/contextApi/usingContextApi/ContextApiTest';
 import CartDemo from './features/contextApi/contextApiWithCart/CartDemo';
+import ViewEditToggle from './features/hoc/ViewEditToggle';
+import CollapseExpand from './features/hoc/CollapseExpand';
 function App() {
   return (
     <div className='App'>
@@ -27,7 +29,9 @@ function App() {
       {/* <PortalDemo /> */}
       {/* <RoutesDemo /> */}
       {/* <ContextApiTest /> */}
-      <CartDemo />
+      {/* <CartDemo /> */}
+      <ViewEditToggle title={'Hello world'} />
+      <CollapseExpand />
     </div>
   );
 }
