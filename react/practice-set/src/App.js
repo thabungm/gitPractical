@@ -14,6 +14,7 @@ import ContextApiTest from './features/contextApi/usingContextApi/ContextApiTest
 import CartDemo from './features/contextApi/contextApiWithCart/CartDemo';
 import ViewEditToggle from './features/hoc/ViewEditToggle';
 import CollapseExpand from './features/hoc/CollapseExpand';
+import UseReducerDemo from './features/useReducer/usingReducer';
 function App() {
   return (
     <div className='App'>
@@ -30,8 +31,9 @@ function App() {
       {/* <RoutesDemo /> */}
       {/* <ContextApiTest /> */}
       {/* <CartDemo /> */}
-      <ViewEditToggle title={'Hello world'} />
-      <CollapseExpand />
+      {/* <ViewEditToggle title={'Hello world'} />
+      <CollapseExpand /> */}
+      <UseReducerDemo />
     </div>
   );
 }
