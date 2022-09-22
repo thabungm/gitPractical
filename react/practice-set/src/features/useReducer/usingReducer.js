@@ -1,15 +1,25 @@
 /* */
+/* const numbers = [1, 2, 3, 4];
+let sum = 0;
+for (let i = 0; i <= 3; i++) {
+  sum = sum + numbers[i];
+}
+console.log(sum); */
 
-/* 
 // target: calculate the sum
-const numbers = [1, 2, 3, 4];
-const reducerFn = (prev, current) => {
+// const numbers = [10, 20, 30, 40];
+/* const reducerFn = (prev, current) => {
   return prev + current;
-};
-numbers.reduce(reducerFn, 0);
+}; */
+/* const result = numbers.reduce((prev, current) => {
+  console.log(prev, '+', current);
+  prev = prev + current;
+  return prev; // 10
+}, 0);
 
-*/
-import { useReducer } from 'react';
+console.log(result); */
+
+import { useReducer, useState } from 'react';
 // Counter
 const initialStateValue = 0;
 const reducer = (stateValue, action) => {
