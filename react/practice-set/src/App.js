@@ -11,7 +11,7 @@ import FormValidation from './features/form/FormValidation';
 import PortalDemo from './features/portal/PortalDemo';
 import RoutesDemo from './features/routes';
 import ContextApiTest from './features/contextApi/usingContextApi/ContextApiTest';
-import CartDemo from './features/contextApi/contextApiWithCart/CartDemo';
+import CartDemo from './features/contextApi/contextApiDemo/CartDemo';
 import ViewEditToggle from './features/hoc/ViewEditToggle';
 import CollapseExpand from './features/hoc/CollapseExpand';
 import UseReducerDemo from './features/useReducer/usingReducer';
@@ -30,10 +30,11 @@ function App() {
       {/* <PortalDemo /> */}
       {/* <RoutesDemo /> */}
       {/* <ContextApiTest /> */}
-      {/* <CartDemo /> */}
+      <CartDemo />
       {/* <ViewEditToggle title={'Hello world'} />
       <CollapseExpand /> */}
-      <UseReducerDemo />
+      {/* <FormValidation /> */}
+      {/* <UseReducerDemo /> */}
     </div>
   );
 }
