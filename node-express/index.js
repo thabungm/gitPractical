@@ -1,6 +1,8 @@
 // const express = require('express');
 import express from 'express';
 import bodyParser from 'body-parser';
+import { connect } from './mongo';
+import Product from './models/Product';
 
 const app = express();
 // PORT
@@ -8,6 +10,7 @@ const app = express();
 // https://facebook.com -> 112.22.33.44:443
 const PORT = 3000;
 app.use(bodyParser.json());
+connect();
 
 const checkEven = (number) => {
   if (number % 2 === 0) {
@@ -15,6 +18,17 @@ const checkEven = (number) => {
   }
   return false;
 };
+
+app.post('/products', async (req, res) => {
+  const product = new Product({
+    name: 'Laptop',
+    description: 'Brand new laptop',
+    price: 500,
+    imageUrl: 'https://someUrl.com',
+  });
+  const newProduct = await product.save();
+  res.json({ data: newProduct });
+});
 
 // proxy server (nginx/apache) 443/80 -> 3000
 // virtual server
