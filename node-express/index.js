@@ -1,13 +1,13 @@
-// console.log('hello world');
-const express = require('express');
-const bodyParser = require('body-parser');
+// const express = require('express');
+import express from 'express';
+import bodyParser from 'body-parser';
 
 const app = express();
 // PORT
 // http://facebook.com -> 112.22.33.44:80
 // https://facebook.com -> 112.22.33.44:443
 const PORT = 3000;
-app.use(bodyParser());
+app.use(bodyParser.json());
 
 const checkEven = (number) => {
   if (number % 2 === 0) {
@@ -32,9 +32,30 @@ app.post('/even-checker', (req, res) => {
   return res.json({ result: `POST ${input.number} is ODD` });
 });
 
-app.get('/even-checker', (req, res) => {
+const validateInput = (data) => {
+  return true;
+};
+
+const validate = (req, res, next) => {
+  let error = validateInput(req.query); // custom logic to validate
+  if (error) {
+    return next('Error inside validate');
+  }
+  next();
+};
+
+// middlewares
+const checkAuth = (req, res, next) => {
+  next();
+  // next('Error inside check auth');
+};
+
+app.get('/even-checker', checkAuth, validate, (req, res) => {
+  // if user is authorize then only call this function
+  // perform validation here
+  // S.R.P
   const input = req.query;
-  console.log(input);
+
   if (checkEven(input.number)) {
     return res.json({ result: `GET ${input.number} is EVEN` });
   }
