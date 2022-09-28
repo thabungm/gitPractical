@@ -1,20 +1,10 @@
-import { MongoClient, ServerApiVersion } from 'mongodb';
+import mongoose from 'mongoose';
 
 const uri =
-  'mongodb+srv://demo:<pwd>@cluster0.w3cje.mongodb.net/?retryWrites=true&w=majority';
-const client = new MongoClient(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  serverApi: ServerApiVersion.v1,
-});
+  'mongodb+srv://demo:demo123@cluster0.w3cje.mongodb.net/?retryWrites=true&w=majority';
 
 export const connect = () => {
-  client.connect((err) => {
-    const collection = client.db('test').collection('devices');
-    // perform actions on the collection object
-    console.log('error present', err);
-    //   client.close();
+  mongoose.connect(uri, {
+    useNewUrlParser: true,
   });
 };
-
-// export default connect;
