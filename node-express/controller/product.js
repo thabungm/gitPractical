@@ -29,7 +29,7 @@ export const remove = async (id) => {
 
 // Update
 export const updateOne = async (id, data) => {
-  const result = Product.findByIdAndUpdate(id, data);
+  const result = await Product.findByIdAndUpdate(id, data);
 
   return result;
 };
