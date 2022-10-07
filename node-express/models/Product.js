@@ -17,6 +17,10 @@ const fields = {
     type: String,
     required: true,
   },
+  status: {
+    type: String,
+    enum: ['Active', 'Draft'],
+  },
 };
 // createdAt, updatedAt
 const ProductSchema = new Schema(fields, { timestamps: true });

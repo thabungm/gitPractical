@@ -9,9 +9,29 @@ export const create = async (data) => {
 };
 
 // Read
+// pagination, search, sort, filter
 export const get = async (params) => {
-  const result = Product.find({});
-  return result;
+  // name = 'macbook'
+  // skip, limit, sort
+  const { keyword, sort = { createdAt: -1 }, limit = 3, page = 1 } = params;
+  // const search
+  // const search = keyword ? { name: keyword } : {};
+  let search;
+  if (keyword) {
+    search = { name: keyword };
+  } else {
+    search = {};
+  }
+  const skip = page * limit;
+  /*
+  50 records total
+  per page = 5 
+  currentPage = 2
+  perPage*currentPage
+  */
+  const result = await Product.find(search).sort(sort).skip(skip).limit(limit);
+  const count = await Product.find(search).count();
+  return { result, count };
 };
 
 export const getOne = async (id) => {
