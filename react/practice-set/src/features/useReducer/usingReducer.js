@@ -22,7 +22,7 @@ console.log(result); */
 import { useReducer, useState } from 'react';
 // Counter
 const initialStateValue = 0;
-const reducer = (stateValue, action) => {
+const callbackReducer = (stateValue, action) => {
   switch (action) {
     case 'increment':
       return stateValue + 1;
@@ -36,7 +36,12 @@ const reducer = (stateValue, action) => {
 };
 
 const UseReducerDemo = () => {
-  const [count, dispatch] = useReducer(reducer, initialStateValue);
+  // const [value, setValue] = useState(0);
+  // console.log(value)
+  // setValue(123)
+  // console.log(value)
+
+  const [count, dispatch] = useReducer(callbackReducer, initialStateValue);
   return (
     <div>
       {count}

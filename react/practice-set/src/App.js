@@ -34,7 +34,7 @@ function App() {
       {/* <ViewEditToggle title={'Hello world'} />
       <CollapseExpand /> */}
       {/* <FormValidation /> */}
-      {/* <UseReducerDemo /> */}
+      <UseReducerDemo />
     </div>
   );
 }

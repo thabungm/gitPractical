@@ -11,6 +11,7 @@ export const create = async (data) => {
 // Read
 // pagination, search, sort, filter
 export const get = async (params) => {
+  
   // name = 'macbook'
   // skip, limit, sort
   const { keyword, sort = { createdAt: -1 }, limit = 3, page = 1 } = params;
