@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-import { Schema } from 'mongoose';
+import mongoose from "mongoose";
+import { Schema } from "mongoose";
 
 const fields = {
   name: {
@@ -17,9 +17,13 @@ const fields = {
     type: String,
     required: true,
   },
+  status: {
+    type: String,
+    enum: ["Active", "Draft"],
+  },
 };
 // createdAt, updatedAt
 const ProductSchema = new Schema(fields, { timestamps: true });
-const Product = mongoose.model('Product', ProductSchema);
+const Product = mongoose.model("Product", ProductSchema);
 
 export default Product;

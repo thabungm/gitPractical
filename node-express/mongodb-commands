@@ -1,0 +1,35 @@
+db.rich.find()
+db.rich.aggregate([
+  {$match: {last_name:'Whackman'}},
+  {$sort: {networth:1}},
+  {$project:{first_name:1, last_name:1, networth:1, _id:0}}
+
+])
+
+// Apply 20% tax on networth
+db.rich.aggregate([
+//   {$match: {last_name:'Whackman'}},
+  {$sort: {networth:1}},
+  {$project:{first_name:1, last_name:1, networth:1, _id:0, tax: {$divide:["$networth", 20]}}}
+
+])
+
+
+// find the people invested in Oil Industry
+// $in:[]
+
+db.rich.aggregate([
+    {$unwind:"$investments"},
+    {$match: {"investments.name":"Oil Industry"}}
+])
+
+// find the families
+db.rich.aggregate([
+    {$group: {_id: "$last_name"}}
+])
+
+db.rich.aggregate([
+    {$group: {_id: "$last_name", total_networth: {$sum: "$networth"}}},
+  {$sort: {total_networth:1}},
+
+])
